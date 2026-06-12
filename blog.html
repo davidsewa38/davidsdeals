@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog – David's Deals</title>
+<meta name="description" content="Reise-Guides, Airline-Tipps und Flug-Hacks von David. Günstig reisen leicht gemacht.">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f5f0;--white:#fff;--black:#111110;--orange:#e8480a;--orange-pale:#fde8df;--text:#2a2a28;--muted:#7a7a74;--border:#e5e0d8;--radius:14px;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg);color:var(--text);font-family:'Plus Jakarta Sans',sans-serif;-webkit-font-smoothing:antialiased;}
+nav{position:sticky;top:0;z-index:100;background:rgba(247,245,240,0.94);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);height:62px;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;}
+.nav-logo{font-weight:800;font-size:1.1rem;color:var(--black);text-decoration:none;}.nav-logo span{color:var(--orange);}
+.nav-links{display:flex;align-items:center;gap:.2rem;}.nav-links a{text-decoration:none;color:var(--muted);font-size:.85rem;font-weight:500;padding:.4rem .8rem;border-radius:8px;transition:all .15s;}
+.nav-links a:hover{color:var(--text);background:var(--border);}
+.nav-cta{background:var(--orange)!important;color:white!important;font-weight:600!important;}
+.hamburger{display:none;background:none;border:none;font-size:1.4rem;cursor:pointer;color:var(--text);}
+.page-header{max-width:1060px;margin:0 auto;padding:4rem 2rem 2rem;}
+.section-tag{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);margin-bottom:.6rem;}
+h1{font-size:clamp(2rem,4vw,3rem);font-weight:800;letter-spacing:-.03em;margin-bottom:.75rem;}
+.page-sub{color:var(--muted);font-size:.95rem;line-height:1.7;}
+.blog-grid{max-width:1060px;margin:0 auto;padding:2rem 2rem 6rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;}
+.blog-card{text-decoration:none;color:inherit;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:var(--white);transition:transform .2s,box-shadow .2s;display:block;}
+.blog-card:hover{transform:translateY(-4px);box-shadow:0 12px 36px rgba(0,0,0,.08);}
+.blog-img{height:170px;display:flex;align-items:center;justify-content:center;font-size:3.8rem;background:var(--bg);border-bottom:1px solid var(--border);}
+.blog-body{padding:1.25rem;}
+.blog-cat{font-size:.7rem;font-weight:700;color:var(--orange);letter-spacing:.07em;text-transform:uppercase;margin-bottom:.4rem;}
+.blog-title{font-size:.95rem;font-weight:700;line-height:1.4;margin-bottom:.4rem;}
+.blog-excerpt{font-size:.8rem;color:var(--muted);line-height:1.6;margin-bottom:.75rem;}
+.blog-meta{font-size:.72rem;color:#bbb;display:flex;gap:.75rem;}
+footer{background:var(--black);color:#555;padding:2.5rem 2rem;}
+.footer-bottom{max-width:1060px;margin:0 auto;display:flex;justify-content:space-between;font-size:.75rem;flex-wrap:wrap;gap:.5rem;}
+.footer-logo{font-weight:800;color:white;text-decoration:none;}.footer-logo span{color:var(--orange);}
+.fade{opacity:0;transform:translateY(20px);transition:opacity .5s ease,transform .5s ease;}
+.fade.in{opacity:1;transform:translateY(0);}
+@media(max-width:900px){.blog-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:600px){.blog-grid{grid-template-columns:1fr;}.nav-links{display:none;}.hamburger{display:block;}}
+.nav-links.open{display:flex;flex-direction:column;position:fixed;top:62px;left:0;right:0;background:var(--bg);border-bottom:1px solid var(--border);padding:1rem;z-index:99;}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">David's<span>Deals</span> ✈️</a>
+  <div class="nav-links" id="nav">
+    <a href="index.html#deals">Deals</a>
+    <a href="index.html#tipps">Tipps</a>
+    <a href="blog.html">Blog</a>
+    <a href="ebook.html" class="nav-cta">📖 Ebook – 9,99€</a>
+  </div>
+  <button class="hamburger" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+</nav>
+
+<div class="page-header fade">
+  <div class="section-tag">Reise-Wissen</div>
+  <h1>Blog & Guides</h1>
+  <p class="page-sub">Detaillierte Guides, Airline-Tipps und Hacks für deine nächste günstige Reise.</p>
+</div>
+
+<div class="blog-grid">
+  <a href="blog/london.html" class="blog-card fade">
+    <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=800&q=80" alt="London" class="blog-img" style="width:100%;height:170px;object-fit:cover;border-bottom:1px solid var(--border);">
+    <div class="blog-body">
+      <div class="blog-cat">Deal Guide</div>
+      <div class="blog-title">London für unter 100€ – So geht's wirklich</div>
+      <div class="blog-excerpt">Flüge ab 12€, günstige Unterkünfte und kostenlose Sehenswürdigkeiten.</div>
+      <div class="blog-meta"><span>✈️ Flüge</span><span>·</span><span>5 Min.</span></div>
+    </div>
+  </a>
+  <a href="blog/wizz-air.html" class="blog-card fade">
+    <img src="https://images.unsplash.com/photo-1474302770737-173ee21bab63?w=800&q=80" alt="Wizz Air" class="blog-img" style="width:100%;height:170px;object-fit:cover;border-bottom:1px solid var(--border);">
+    <div class="blog-body">
+      <div class="blog-cat">Airline Tipps</div>
+      <div class="blog-title">Wizz Air All-You-Can-Fly – Lohnt es sich 2025?</div>
+      <div class="blog-excerpt">Meine ehrliche Analyse: Wann das Abo Sinn macht und wann nicht.</div>
+      <div class="blog-meta"><span>💳 Membership</span><span>·</span><span>6 Min.</span></div>
+    </div>
+  </a>
+  <a href="blog/langstrecke.html" class="blog-card fade">
+    <img src="https://images.unsplash.com/photo-1540339832862-474599807836?w=800&q=80" alt="Langstrecke" class="blog-img" style="width:100%;height:170px;object-fit:cover;border-bottom:1px solid var(--border);">
+    <div class="blog-body">
+      <div class="blog-cat">Langstrecke</div>
+      <div class="blog-title">Low-Budget Langstreckenflüge – Die besten Tricks</div>
+      <div class="blog-excerpt">USA, Asien oder Afrika günstig erreichen – diese Tricks kennen die wenigsten.</div>
+      <div class="blog-meta"><span>🌐 International</span><span>·</span><span>7 Min.</span></div>
+    </div>
+  </a>
+  <a href="blog/inkognito.html" class="blog-card fade">
+    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" alt="Inkognito" class="blog-img" style="width:100%;height:170px;object-fit:cover;border-bottom:1px solid var(--border);">
+    <div class="blog-body">
+      <div class="blog-cat">Hacks</div>
+      <div class="blog-title">Inkognito-Modus: Warum du immer so suchen solltest</div>
+      <div class="blog-excerpt">So sparst du bis zu 20% bei jedem Flug – ganz einfach.</div>
+      <div class="blog-meta"><span>💡 Tipp</span><span>·</span><span>3 Min.</span></div>
+    </div>
+  </a>
+  <a href="blog/fehltarife.html" class="blog-card fade">
+    <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80" alt="Fehltarife" class="blog-img" style="width:100%;height:170px;object-fit:cover;border-bottom:1px solid var(--border);">
+    <div class="blog-body">
+      <div class="blog-cat">Deals finden</div>
+      <div class="blog-title">Fehltarife & Preisfehler: So schnappst du sie dir</div>
+      <div class="blog-excerpt">Airlines machen Fehler – wer schnell ist fliegt für fast nichts.</div>
+      <div class="blog-meta"><span>⚡ Schnell sein</span><span>·</span><span>4 Min.</span></div>
+    </div>
+  </a>
+  <a href="blog/hotel-hacks.html" class="blog-card fade">
+    <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=80" alt="Hotel Hacks" class="blog-img" style="width:100%;height:170px;object-fit:cover;border-bottom:1px solid var(--border);">
+    <div class="blog-body">
+      <div class="blog-cat">Hotels</div>
+      <div class="blog-title">4-Sterne Hotel für 2-Sterne-Preis buchen</div>
+      <div class="blog-excerpt">Booking.com Genius, Last-Minute und direkte Buchung – so sparst du am meisten.</div>
+      <div class="blog-meta"><span>🏨 Hotels</span><span>·</span><span>5 Min.</span></div>
+    </div>
+  </a>
+</div>
+
+<footer>
+  <div class="footer-bottom">
+    <a href="index.html" class="footer-logo">David's<span>Deals</span> ✈️</a>
+    <span>© 2025 davidsdeals.de · <a href="impressum.html" style="color:#555;">Impressum</a> · <a href="datenschutz.html" style="color:#555;">Datenschutz</a></span>
+  </div>
+</footer>
+<script>
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');});},{threshold:.08});
+document.querySelectorAll('.fade').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
